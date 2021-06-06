@@ -1,0 +1,101 @@
+.fondo1 {
+    background-image: url("../images/fondo1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.left-text1 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    color: #494F66;
+}
+
+.left-text2 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -0.2px;
+    color: #494F66;
+}
+
+.left-text2-span {
+    color: #ef3340;
+}
+
+.left-text3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    /* or 171% */
+    display: flex;
+    align-items: center;
+    /* Gray_2_Paragraph */
+    color: #676F8F;
+    width: 288px;
+}
+
+.left-text4 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 20px;
+    /* identical to box height, or 167% */
+    letter-spacing: 0.2px;
+    /* Gray_3 */
+    color: #A3ABCC;
+}
+
+.right-textTop1 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    /* identical to box height, or 167% */
+    display: flex;
+    align-items: center;
+    text-align: right;
+    letter-spacing: 0.2px;
+    /* Gray_2_Paragraph */
+    color: #676F8F;
+}
+
+.right-textTop2 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height, or 171% */
+    text-align: right;
+    /* Acian_2_Hover */
+    color: #6F7DFF;
+}
+
+.formHome {
+    width: 330px;
+}
+
+.formHome-text1 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 36px;
+    /* identical to box height, or 129% */
+    letter-spacing: -0.2px;
+    /* Gray_1_Títulos */
+    color: #494F66;
+}
+
+.input_height{
+    height: 3.5rem;
+}

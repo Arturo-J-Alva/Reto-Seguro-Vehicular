@@ -8,7 +8,7 @@ const Layout = ({ title, children }) => {
                 <title> {title} </title>
             </Head>
 
-            <div className="px-2 sm:px-24">
+            <div className="">
                 {children}
             </div>
 

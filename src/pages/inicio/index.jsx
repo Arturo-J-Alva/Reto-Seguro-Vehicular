@@ -1,20 +1,23 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import Layout from '../../g_components/layout'
+import LeftDesktop from '../../components/inicio/leftDesktop';
+import RightDesktop from '../../components/inicio/rightDesktop';
+import Layout from '../../globalcomponents/layout'
 
 
 const Inicio = () => {
     //const dispatch = useDispatch();
     const { Tipo } = useSelector(reducers => reducers.loginReducer);
     return (
-        <Layout title="Home">
-            <h1 className="text-2xl font-bold uppercase underline text-center text-blue-700">Inicio!</h1>
-            <p className="">
-                Tipo: {Tipo}
-            </p>
-            <p>
-            process.env.NODE_ENV : {process.env.NODE_ENV }
-            </p>
+        <Layout title="Seguro Vehícular | Home">
+            <div className="grid grid-cols-5 gap-x-0 ">
+                <div className="col-span-2 fondo1">
+                    <LeftDesktop />
+                </div>
+                <div className="col-span-3">
+                    <RightDesktop />
+                </div>
+            </div>
         </Layout>
     )
 }
