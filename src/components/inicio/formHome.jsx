@@ -20,7 +20,7 @@ const FormHome = () => {
         console.log("formData:", formData)
         const { document, plaque, phone, check } = formData
         if (!document || !plaque || !phone || !check) return alert("Debe aceptar las políticas para continuar.")
-        //router.push("paso1")
+        router.push("datos-auto")
 
     }
 
@@ -41,7 +41,7 @@ const FormHome = () => {
                 Acepto la <a href="#" className="underline">Política de Protección de Datos Personales y los Términos y Condiciones.</a>
             </CheckBox>
 
-            <FormButton text="COTÍZALO" className="w-48 mt-8" type="submit"
+            <FormButton text="COTÍZALO" className=" mt-8 w-full md:w-48 mb-8" type="submit"
                 onClick={() => null} />
         </form>
     )
