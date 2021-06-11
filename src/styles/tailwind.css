@@ -1,11 +1,46 @@
 /* purgecss start ignore */
-@tailwind  base;
-@tailwind  components;
-/* purgecss end ignore */
-@tailwind  utilities;
 
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+
+@tailwind utilities;
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+.left2-enableOpt {
+    @apply w-6 h-6 rounded-full flex justify-center items-center text-white;
+    background-color: #6F7DFF;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.6px;
+}
+
+.left2-disableOpt {
+    border: 1px solid #C5CBE0;
+    box-sizing: border-box;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+    text-align: center;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    /* Gray_4 */
+    color: #C5CBE0;
+    @apply w-6 h-6 rounded-full flex justify-center items-center;
+}
+
+.header1 {
+    @apply flex flex-row justify-between px-8 items-center h-16;
+    border-bottom: 1px solid #E4E8F7;
 }

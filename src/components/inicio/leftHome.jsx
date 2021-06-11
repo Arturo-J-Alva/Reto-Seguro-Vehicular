@@ -1,6 +1,6 @@
 import React from 'react'
 
-const LeftDesktop = () => {
+const LeftHome = () => {
     return (
         <div className="pt-8">
             <div className="flex flex-row justify-between items-center md:block mb-16">
@@ -22,4 +22,4 @@ const LeftDesktop = () => {
     )
 }
 
-export default LeftDesktop
+export default LeftHome

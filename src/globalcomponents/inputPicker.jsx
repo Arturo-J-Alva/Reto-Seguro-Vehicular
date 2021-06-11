@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import useInput from '../utils/customHooks/useInput'
 
-const InputPicker = ({ inputValue, classContainer, list }) => {    
-    const { setFocus, setValue, inputRef } = useInput(inputValue)
+const InputPicker = ({ inputValue, classContainer, list, label }) => {
+    const { setValue, inputRef } = useInput(inputValue)
 
     return (
         <div
-            onClick={() => setFocus(true)} onFocus={() => setFocus(true)} onBlur={() => setFocus(false)}
             className={"input_height w-full flex flex-col justify-center border border-gray-400 px-4 rounded hover:border-indigo-400 text-gray-600 focus:border-indigo-600 my-2 " + classContainer}>
+            {!!label && <p className="text-sm">{label}</p>}
             <select
                 className="text-normal focus:outline-none text-gray-700 w-full"
                 ref={inputRef}
@@ -31,11 +31,12 @@ InputPicker.prototype = {
             value: PropTypes.string,
             label: PropTypes.string,
         })
-    )
+    ),
+    label: PropTypes.string,
 }
 
 InputPicker.defaultProps = {
-    list:[],
+    list: [],
     classContainer: ""
 }
 

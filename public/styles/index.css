@@ -68,6 +68,10 @@
     color: #676F8F;
 }
 
+.right-textTop1_color2 {
+    color: #A3ABCC;
+}
+
 .right-textTop2 {
     font-family: Roboto;
     font-style: normal;
@@ -100,6 +104,108 @@
     height: 3.5rem;
 }
 
+.left2-text1 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #494F66;
+}
+
+.left2-text2 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #C5CBE0;
+}
+
+.left2-bg {
+    background-color: #F7F8FC;
+    height: calc(100vh - 64px);
+    box-sizing: border-box;
+}
+
+.arrow-left {
+    border-radius: 999px;
+    border-color: #EF3340;
+    border-width: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22.5px;
+    height: 22.5px;
+}
+
+.arrow-left i {
+    border: solid #EF3340;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    margin-left: 2.5px;
+}
+
+.backText {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    /* Gray_3 */
+    color: #A3ABCC;
+}
+
+.right2-h1 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 48px;
+    /* identical to box height, or 120% */
+    letter-spacing: -0.6px;
+    /* Gray_1_Títulos */
+    color: #494F66;
+}
+
+.right2-h1 span {
+    color: #EF3340;
+}
+
+.right2-text1 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #676F8F;
+}
+
+.formDataCar {
+    width: 384px;
+}
+
+.right2-text2 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #494F66;
+}
+
 @media (max-width:767px) {
     .fondo1 {
         background-image: none;
@@ -111,8 +217,7 @@
         font-size: 28px;
         line-height: 36px;
     }
-    .formHome-text1{
+    .formHome-text1 {
         font-size: 24px;
     }
-    
 }

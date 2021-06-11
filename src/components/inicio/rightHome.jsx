@@ -1,7 +1,7 @@
 import React from 'react'
 import FormHome from './formHome'
 
-const RightDesktop = () => {
+const RightHome = () => {
     return (
         <div className="pt-8">
             <div className="hidden md:flex flex-row justify-end w-full pr-32">
@@ -18,4 +18,4 @@ const RightDesktop = () => {
     )
 }
 
-export default RightDesktop
+export default RightHome
