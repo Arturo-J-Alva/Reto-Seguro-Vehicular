@@ -206,6 +206,83 @@
     color: #494F66;
 }
 
+.right2-text3 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #676F8F;
+}
+
+.right2-text4 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    text-align: center;
+    letter-spacing: 0.2px;
+    /* Gray_1_Títulos */
+    color: #494F66;
+}
+
+.right2-text5 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #494F66;
+}
+
+.right2-text5_border {
+    border-bottom: 1px solid #E4E8F7;
+    width: 224px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.right2-text6 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2px;
+    color: #494F66;
+    width: 128px;
+    height: 48px;
+}
+
+.right2-link {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #6F7DFF;
+}
+
+.inputIncrement {
+    width: 160px;
+    height: 56px;
+    left: 728px;
+    top: 549px;
+    border: 1px solid #C5CBE0;
+    box-sizing: border-box;
+    border-radius: 8px
+}
+
 @media (max-width:767px) {
     .fondo1 {
         background-image: none;
