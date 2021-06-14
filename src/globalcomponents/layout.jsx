@@ -11,13 +11,14 @@ const Layout = ({ title, children, header }) => {
 
             <div className="">
                 {header && (
-                    <div className="header1 md:px-24">
+                    <div className="header1 md:px-24 ">
                         <img src="./images/logo-rimac.png" alt="logo-rimac" className="" />
-                        <div className="flex flex-row">
-                            <p className="right-textTop1 right-textTop1_color2">¿Tienes alguna duda?</p>
-                            <div className="flex flex-row ml-6 items-center">
-                                <img src="./images/ic_phone.png" alt="icon-phone" className="w-4 h-4 mr-1" />
-                                <p className="right-textTop2">(01) 411 6001</p>
+                        <div className="flex flex-row ">
+                            <p className="hidden md:block right-textTop1 right-textTop1_color2">¿Tienes alguna duda?</p>
+                            <div className="flex flex-row ml-6 items-center ">
+                                <img src="./images/ic_phone.png" alt="icon-phone" className="w-4 h-5 mr-1" />
+                                <p className="hidden md:block right-textTop2">(01) 411 6001</p>
+                                <p className="block md:hidden right-textTop2 ml-1">Llámanos</p>
                             </div>
                         </div>
                     </div>

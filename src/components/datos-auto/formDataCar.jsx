@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import InputPicker from '../../globalcomponents/inputPicker'
 import InputRadio from '../../globalcomponents/inputRadio'
 import FormButton from '../../globalcomponents/formButton'
+import { useRouter } from 'next/router';
 
 const FormDataCar = () => {
 
     const [isGas, setIsGas] = useState("yes")
     const [sumAssured, setSumAssured] = useState(14300)
+    const router = useRouter()
 
     function formatNumber() {
         const mil = Math.floor(sumAssured / 1000)
@@ -22,27 +24,47 @@ const FormDataCar = () => {
         setSumAssured(x => x > 12500 ? (x - 100) : x)
     }
 
+    function onSubmit(ev) {
+        ev.preventDefault()
+        router.push("arma-plan")
+
+    }
+
     return (
-        <div className="mt-6 formDataCar">
+        <div className="mt-6 formDataCar" >
             <h1 className="right2-h1">¡Hola,<span> Juan!</span></h1>
             <p className="right2-text1 mt-2">Completa los datos de tu auto</p>
-            <form className="mt-6">
+            <form className="mt-6" onSubmit={onSubmit}>
                 <InputPicker classContainer="" inputValue={() => null} list={dataYears} label="Año" />
                 <InputPicker classContainer="mt-4" inputValue={() => null} list={dataBrands} label="Marca" />
 
-                <div className="flex flex-row justify-around items-center mt-6">
-                    <p className="right2-text2">¿Tu auto es a gas?</p>
-                    <InputRadio text="Sí" name="gas" value="yes"
-                        defaultChecked={isGas === "yes"} onChange={(e) => setIsGas(e)}
-                    />
-                    <InputRadio text="No" name="gas" value="no"
-                        defaultChecked={isGas === "no"} onChange={(e) => setIsGas(e)}
-                    />
+                <div className="flex lg:hidden mt-6 p-4" style={{ background: "#F7F8FC", borderRadius: "8px" }}>
+
+                    <img src="./images/icon_car.png" alt="icon-car" className="h-16 w-16" />
+                    <div className="ml-4">
+                        <p className="right2-text6" >¿No encuentras el modelo ?</p>
+                        <br />
+                        <a href="#" className="right2-link">
+                            clic aquí
+                        </a>
+                    </div>
                 </div>
 
-                <hr className="my-10" />
+                <div className="md:flex md:flex-row md:justify-between md:items-center mt-6 mb-6 md:mb-0">
+                    <p className="right2-text2">¿Tu auto es a gas?</p>
+                    <div className="flex">
+                        <InputRadio text="Sí" name="gas" value="yes"
+                            defaultChecked={isGas === "yes"} onChange={(e) => setIsGas(e)}
+                        />
+                        <InputRadio text="No" name="gas" value="no" className="ml-8"
+                            defaultChecked={isGas === "no"} onChange={(e) => setIsGas(e)}
+                        />
+                    </div>
+                </div>
 
-                <div className="flex items-center">
+                <hr className="hidden md:block my-10" />
+
+                <div className="md:flex items-center">
                     <div className="w-48">
                         <p className="right2-text2 text-left mb-1">Indica la suma asegurada</p>
                         <div className="flex justify-between">
@@ -51,16 +73,17 @@ const FormDataCar = () => {
                         </div>
                     </div>
                     <div>
-                        <div className="inputIncrement ml-8 hover:border-indigo-400 flex flex-row justify-between items-center px-5">
-                            <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        <div className="inputIncrement md:ml-8 hover:border-indigo-400 flex flex-row justify-between items-center px-5 mt-4 md:mt-0">
+                            <svg width={12} height={2} viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 onClick={subtract}>
-                                <path d="M11.0001 1L1.00012 1" stroke="#6F7DFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M11.0001 1L1.00012 1" stroke="#6F7DFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
+
                             <p className="right2-text4 select-none">$ {formatNumber()}</p>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 onClick={addSum}>
-                                <path d="M8.00012 3V13" stroke="#6F7DFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M13.0001 8L3.00012 8" stroke="#6F7DFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8.00012 3V13" stroke="#6F7DFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M13.0001 8L3.00012 8" stroke="#6F7DFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </div>
 
@@ -68,7 +91,7 @@ const FormDataCar = () => {
 
                 </div>
 
-                <FormButton text="CONTINUAR" className=" mt-12 md:w-48 mb-8" type="submit" />
+                <FormButton text="CONTINUAR" className=" mt-12 w-full md:w-48 mb-8" type="submit" />
 
             </form>
         </div>
